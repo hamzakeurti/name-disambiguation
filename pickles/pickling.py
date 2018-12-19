@@ -1,7 +1,7 @@
 import pickle
 
 PUBS_TRAIN_DF = "pickles/train/pubs_train.p"
-ASSIGN_TRAIN_DF = "pickles/train/assignment_train.p"
+ASSIGNMENT_TRAIN_DF = "pickles/train/assignment_train.p"
 PUBS_VALIDATE_DF = "pickles/validate/pubs_validate.p"
 
 
