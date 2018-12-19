@@ -7,7 +7,6 @@ from pickles import pickling
 DATA_DIRECTORY = 'data/'
 PUBS_TRAIN_PATH = DATA_DIRECTORY + 'pubs_train.json'
 ASSIGNMENT_TRAIN_PATH = DATA_DIRECTORY + 'assignment_train.json'
-PUBS_VALIDATE_PATH = DATA_DIRECTORY + 'pubs_validate.json'
 
 
 def load_pubs_train(refresh_pickle=False):
