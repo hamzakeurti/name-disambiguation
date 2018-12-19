@@ -5,10 +5,9 @@ ASSIGN_TRAIN_DF = "pickles/train/assignment_train.p"
 PUBS_VALIDATE_DF = "pickles/validate/pubs_validate.p"
 
 
-
-def pickle_object(object,filename):
+def pickle_object(obj, filename):
     with open(filename, 'wb') as outfile:
-        pickle.dump(object, outfile)
+        pickle.dump(obj, outfile)
 
 
 def unpickle_object(filename):
