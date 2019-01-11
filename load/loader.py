@@ -17,3 +17,11 @@ def load_df_pubs(json_path,pickles_path=None,refresh_pickle=False):
     return pubs_dfs
 
 
+def load_assignment(json_path,pickles_path=None,refresh_pickle=False):
+    if (not os.path.exists(pickles_path)) or refresh_pickle:
+        with open(json_path, 'rb') as infile:
+            raw_data = json.load(infile)
+            pickling.pickle_object(raw_data, pickles_path)
+    else:
+        raw_data = pickling.unpickle_object(pickles_path)
+    return raw_data
