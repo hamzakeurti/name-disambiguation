@@ -15,11 +15,4 @@ def load_df_pubs(refresh_pickle=False):
 
 
 def load_assignment(refresh_pickle=False):
-    if (not os.path.exists(pickling.ASSIGNMENT_TRAIN_DF)) or refresh_pickle:
-        with open(ASSIGNMENT_TRAIN_PATH, 'rb') as infile:
-            raw_data = json.load(infile)
-            df = pd.DataFrame.from_dict(raw_data)
-            pickling.pickle_object(df, pickling.ASSIGNMENT_TRAIN_DF)
-    else:
-        df = pickling.unpickle_object(pickling.ASSIGNMENT_TRAIN_DF)
-    return df
+    return loader.load_assignment(json_path=ASSIGNMENT_TRAIN_PATH,pickles_path=pickling.ASSIGNMENT_TRAIN,refresh_pickle=refresh_pickle)
