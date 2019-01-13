@@ -2,7 +2,7 @@ from pickles import pickling
 from load import loader
 
 DATA_DIRECTORY = 'data/'
-PUBS_TEST_PATH = DATA_DIRECTORY + 'pubs_train.json'
+PUBS_TEST_PATH = DATA_DIRECTORY + 'pubs_test.json'
 
 
 def load_df_pubs(refresh_pickle=False):
